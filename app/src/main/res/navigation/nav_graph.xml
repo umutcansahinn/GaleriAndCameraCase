@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="com.umutcansahin.galeryandcameracase.camera.CameraFragment"
+        android:label="fragment_camera"
+        tools:layout="@layout/fragment_camera" />
+    <fragment
+        android:id="@+id/galleryFragment"
+        android:name="com.umutcansahin.galeryandcameracase.gallery.GalleryFragment"
+        android:label="fragment_gallery"
+        tools:layout="@layout/fragment_gallery" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.umutcansahin.galeryandcameracase.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_cameraFragment"
+            app:destination="@id/cameraFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_galleryFragment"
+            app:destination="@id/galleryFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_cameraControllerFragment"
+            app:destination="@id/cameraControllerFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_cameraProviderFragment"
+            app:destination="@id/cameraProviderFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cameraControllerFragment"
+        android:name="com.umutcansahin.galeryandcameracase.camera_controller.CameraControllerFragment"
+        android:label="fragment_camera_controller"
+        tools:layout="@layout/fragment_camera_controller" />
+    <fragment
+        android:id="@+id/cameraProviderFragment"
+        android:name="com.umutcansahin.galeryandcameracase.camera_provider.CameraProviderFragment"
+        android:label="fragment_camera_provider"
+        tools:layout="@layout/fragment_camera_provider" />
+</navigation>
